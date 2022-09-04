@@ -1,0 +1,113 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --color-primary: #3fa9f5;
+  --color-text: #333;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.aside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.aside__brand {
+  width: 9rem;
+  height: 8rem;
+}
+
+.aside__brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.aside__presentation-title {
+  font-family: var(--font-family);
+  font-size: 6.6rem;
+  text-align: center;
+}
+.aside__presentation-text {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.navbar {
+  width: 32.9rem;
+  height: 30rem;
+  color: white;
+}
+
+.navbar__menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar__item {
+  background: var(--color-primary);
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.navbar__item a {
+  font-size: 1.6rem;
+}
+
+.aside__social i {
+  color: var(--color-text);
+  margin: 0 1rem;
+  font-size: 1.6rem;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background: url(./public/img/sean-pierce-w-FL8kNzQr0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 799px) {
+  .aside {
+    width: 100vw;
+  }
+
+  .hero {
+    display: none;
+  }
+}
